@@ -37,27 +37,27 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero relative flex w-full h-screen select-none items-center justify-center" aria-label="hero">
-      <div className="z-10 flex flex-col  w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold  uppercase text-accent-300">
-        <div className="title 2xl:py-7">
+      <div className="z-10 flex flex-col w-full items-center text-title text-accent-300">
+        <div className="title text-base">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-96 overflow-visible">
             Hey, I&apos;m Minh
           </h1>
         </div>
-        <div className=" title 2xl:py-7">
-        <h1 ref={(el) => (titles.current[1] = el)} className="translate-y-96 font-outline-3 md:font-outline-4 text-transparent overflow-visible">
-            Hey, I&apos;m Minh
+        <div className="title 2xl:text-[9vw] text-center font-bold uppercase py-0">
+        <h1 ref={(el) => (titles.current[1] = el)} className="translate-y-96 overflow-visible">
+            My Portfolio
           </h1>
         </div>
-        <div className=" title 2xl:py-7">
+        <div className="title font-medium text-lg py-0 leading-tight">
           <h1 ref={(el) => (titles.current[2] = el)} className="translate-y-96">
-            Hey, I&apos;m Minh
+            CREATE BY CYNDI LAUPER (IT'S ME)
           </h1>
         </div>
       </div>
-      <div
+      {/* <div
         ref={imgContainer}
-        className="absolute mx-auto  w-[55%] overflow-hidden rounded-md"
+        className="absolute mx-auto w-[55%] overflow-hidden rounded-md"
       >
         <img
           ref={img}
@@ -65,7 +65,7 @@ export default function Hero() {
           src={heroImg}
           alt="Abstract cubic background image."
         />
-      </div>
+      </div> */}
       <div ref={scroll} className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
         <span className=" rotate-90 text-body-3">scroll</span>
         <div className="relative h-1 w-10 rotate-90 overflow-hidden">

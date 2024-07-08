@@ -11,6 +11,9 @@ import Services from "./components/homepage/Services";
 import Works from "./components/homepage/Works";
 import Contact from "./components/homepage/Contact";
 import Footer from "./components/ui/Footer";
+import Home from "./pages/Home"
+import "./App.css"
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
  
@@ -47,6 +50,8 @@ const App = () => {
   
 
   return (
+    <>
+    {/* <Route path="/home" element={<Home />} /> */}
     <div className="bg-secondary-100">
       <NavBar sectionRefs={sectionRefs.current} />{" "}
       {/* passing sectionRefs props to give access to Navbar, Navbar can then access the props which have access to the array of sectionRef and loop over it */}
@@ -61,6 +66,7 @@ const App = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

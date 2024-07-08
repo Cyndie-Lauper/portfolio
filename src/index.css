@@ -3,20 +3,17 @@
 @tailwind utilities;
 
 @layer base {
-
-  /* *{
-    border: 1px solid red;
-  } */
+  
   ::-moz-selection {
-    background: #D1D1C7
+    background: #d1d1c7;
   }
 
   ::-webkit-selection {
-    background: #D1D1C7
+    background: #d1d1c7;
   }
 
   ::selection {
-    background: #D1D1C7
+    background: #d1d1c7;
   }
 
   .text-smooth {
@@ -41,10 +38,9 @@
     font-style: normal;
   }
 
-
   @media (min-width: 640px) {
     * {
-      cursor: none
+      cursor: none;
     }
   }
 
@@ -66,13 +62,13 @@
   }
 
   .font-outline-3 {
-    -webkit-text-stroke: 4px #0E0E0C;
+    -webkit-text-stroke: 4px #0e0e0c;
   }
 }
 
 @layer components {
   .button {
-    @apply bg-accent-300 px-8 py-3 text-secondary-200 rounded-full
+    @apply rounded-full bg-accent-300 px-8 py-3 text-secondary-200;
   }
 }
 
@@ -81,10 +77,9 @@
     clip-path: polygon(0 0, 200% 0, 100% 100%, 0% 100%);
     line-height: clamp(6rem, 16vw, 10rem);
     /* Set the desired line height */
-
   }
 
-  nav a:hover~.cursor {
+  nav a:hover ~ .cursor {
     transform: scale(5);
     opacity: 0;
   }
