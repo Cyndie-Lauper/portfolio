@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@studio-freight/lenis": "^1.0.13",
     "caniuse-lite": "^1.0.30001640",
+    "framer-motion": "^11.2.13",
     "gsap": "^3.11.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
