@@ -79,6 +79,11 @@
     /* Set the desired line height */
   }
 
+  .title-success {
+    clip-path: polygon(0 0, 200% 0, 100% 100%, 0% 100%);
+    /* line-height: clamp(6rem, 16vw, 10rem); */
+  }
+
   nav a:hover ~ .cursor {
     transform: scale(5);
     opacity: 0;
@@ -87,4 +92,57 @@
   .section-heading {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.button1 {
+  display: flex;
+  padding: 1.1rem 2.5rem 60px 3.5rem;
+  padding-left: 90px;
+  color: #0e0e0c;
+  transition: all 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  font-size: 18px;
+  color: #70705C;
+}
+
+.button1 .icon {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button1 .icon span {
+  background: black;
+  border-radius: 100%;
+  padding: 0rem;
+  width: 0rem;
+  height: 0rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-180deg);
+  transition: all 0.5s ease;
+}
+
+.button1:hover .icon span {
+  transform: rotate(0deg);
+  border-radius: 100%;
+  padding: 0.6rem;
+  width: 0.9rem;
+  height: 0.9rem;
 }
