@@ -2,7 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-function HomePage() {
+function Preloader() {
   const container = useRef();
 
   useGSAP(
@@ -75,4 +75,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Preloader;
