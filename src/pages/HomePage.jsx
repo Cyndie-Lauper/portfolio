@@ -41,7 +41,7 @@ export default function HomePage() {
   }, []);
   return (
     <>
-      <div className="bg-secondary-300">
+      <div className="bg-secondary-200">
         <NavBar sectionRefs={sectionRefs.current} />{" "}
         {/* passing sectionRefs props to give access to Navbar, Navbar can then access the props which have access to the array of sectionRef and loop over it */}
         <Hero />

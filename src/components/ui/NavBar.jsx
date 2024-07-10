@@ -41,7 +41,7 @@ export default function NavBar({ sectionRefs }) {
           .timeline()
           .to(navBar.current, { color: "#DDDDD5" })
           .to(cta.current, { backgroundColor: "#D1D1C7", color: "#0E0E0C" }, 0)
-          .to(".bg-secondary-300", { backgroundColor: "#0E0E0C" }, 0),
+          .to(".bg-secondary-200", { backgroundColor: "#0E0E0C" }, 0),
 
         toggleActions: "restart reverse restart reverse",
       });
@@ -52,7 +52,7 @@ export default function NavBar({ sectionRefs }) {
   return (
     <header
       ref={navBar}
-      className="fixed top-0 z-50 flex w-full -translate-y-full items-center justify-between bg-secondary-300 px-5 py-4"
+      className="fixed top-0 z-50 flex w-full -translate-y-full items-center justify-between bg-secondary-200 px-5 py-4"
     >
       {/* logo */}
       <a href="#hero" aria-label="Logo" className="z-50">

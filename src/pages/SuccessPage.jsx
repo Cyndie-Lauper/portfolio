@@ -34,7 +34,7 @@ export default function SuccessPage() {
   }, []);
   return (
     <>
-      <div className="bg-secondary-300">
+      <div className="bg-secondary-200">
         <NavBar sectionRefs={sectionRefs.current} />{" "}
         <Success />
       </div>
