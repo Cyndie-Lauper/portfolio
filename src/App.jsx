@@ -4,6 +4,7 @@ import Success from "./pages/SuccessPage";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/Preloader/Preloader";
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +12,6 @@ const App = () => {
   useEffect(() => {
       setTimeout(() => {
         setIsLoading(false);
-        // document.body.style.cursor = "default";
         window.scrollTo(0, 0);
       }, 2000);
     });
@@ -28,6 +28,7 @@ const App = () => {
           <Route path="/success" element={<Success />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </>
   );
 };

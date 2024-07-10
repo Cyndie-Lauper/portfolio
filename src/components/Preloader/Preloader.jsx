@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 
-const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
+const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo", "Xin Chào"]
 
 export default function Preloader() {
     const [index, setIndex] = useState(0);
@@ -30,7 +30,7 @@ export default function Preloader() {
         },
         exit: {
             d: targetPath,
-            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3}
+            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.5}
         }
     }
 
