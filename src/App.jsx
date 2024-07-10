@@ -39,9 +39,12 @@ const App = () => {
             property="og:description"
             content="I create elevating digital experiences that inspire and connect with people through design and development"
           />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           <meta
             property="og:image"
-            content="https://www.sogaiart.com/opengraph-image.png?7da4453306bf765e"
+            content="./assets/images/image-metadata.png"
           />
           <meta property="og:url" content="https://liiana.vercel.app/" />
         </Helmet>
