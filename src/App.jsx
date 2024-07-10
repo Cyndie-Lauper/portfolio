@@ -44,7 +44,7 @@ const App = () => {
           <meta property="og:image:height" content="630" />
           <meta
             property="og:image"
-            content="./assets/images/image-metadata.png"
+            content="https://www.sogaiart.com/opengraph-image.png?7da4453306bf765e"
           />
           <meta property="og:url" content="https://liiana.vercel.app/" />
         </Helmet>
