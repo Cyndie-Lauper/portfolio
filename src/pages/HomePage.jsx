@@ -53,6 +53,7 @@ export default function HomePage() {
           <Works forwardedRef={(el) => (sectionRefs.current[1] = el)} />
           <Contact />
         </main>
+        <Footer />
       </div>
     </>
   );
