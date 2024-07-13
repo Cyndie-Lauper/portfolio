@@ -9,6 +9,7 @@ import Services from "../components/homepage/Services";
 import Works from "../components/homepage/Works";
 import Contact from "../components/homepage/Contact";
 import Footer from "../components/ui/Footer";
+import StickyFooter from "../components/sticky/StickyFooter";
 
 export default function HomePage() {
   gsap.registerPlugin(ScrollTrigger);
@@ -54,6 +55,7 @@ export default function HomePage() {
           <Contact />
         </main>
         <Footer />
+        <StickyFooter />
       </div>
     </>
   );

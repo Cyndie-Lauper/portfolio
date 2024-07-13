@@ -37,6 +37,7 @@ export default function SuccessPage() {
       <div className="bg-secondary-200">
         <NavBar sectionRefs={sectionRefs.current} />{" "}
         <Success />
+        <Footer />
       </div>
     </>
   );
