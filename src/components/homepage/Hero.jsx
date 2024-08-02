@@ -1,10 +1,8 @@
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
-import heroImg from "/src/assets/images/heroimg.webp";
 
 export default function Hero() {
   const img = useRef(null);
-  const imgContainer = useRef(null);
   const titles = useRef([]);
   const scrollLine = useRef(null);
   const scroll = useRef(null)
@@ -21,12 +19,7 @@ export default function Hero() {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    tl.from(imgContainer.current, {
-      scale: 1.3,
-      duration: 3.25,
-      ease: "power3.inOut",
-    })
-      .from(
+    tl.from(
         img.current,
         { scale: 2, duration: 3.2, ease: "power4.inOut" },
         "-=3.1"
@@ -55,17 +48,6 @@ export default function Hero() {
           </h1>
         </div>
       </div>
-      {/* <div
-        ref={imgContainer}
-        className="absolute mx-auto w-[55%] overflow-hidden rounded-md"
-      >
-        <img
-          ref={img}
-          className=" scale-110 aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
-          src={heroImg}
-          alt="Abstract cubic background image."
-        />
-      </div> */}
       <div ref={scroll} className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
         <span className=" rotate-90 text-body-3">scroll</span>
         <div className="relative h-1 w-10 rotate-90 overflow-hidden">

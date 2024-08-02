@@ -1,4 +1,4 @@
-import ibgroup from "/src/assets/images/ib-group-desktop.webp";
+import significo from "/src/assets/images/significo-desktop.png";
 import memento from "/src/assets/images/memento-desktop.webp";
 import acc from "/src/assets/images/acc-square.webp";
 import daddy from "/src/assets/images/godaddy-desktop.webp";
@@ -18,14 +18,13 @@ export default function Works({ forwardedRef }) {
         {/* Project #1 */}
         <div className=" col-span-1 md:col-span-12">
           <Projects
-            link="https://musical-stroopwafel-1c2327.netlify.app/landing.html"
-            img={ibgroup}
-            alt="IBGroup vietnam website mockup"
-            name="ibgroup vietnam website clone"
+            link="https://clone-significo.vercel.app/"
+            img={significo}
+            alt="Significo website"
+            name="significo website clone"
             type="Web Design • Frontend Development"
-            year="2023"
+            year="2024"
             tools="HTML • TailwindCSS • JavaScript • Figma"
-
           />
         </div>
         {/* Project #2 */}
