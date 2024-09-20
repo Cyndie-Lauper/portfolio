@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
+import { useEffect, useState, useRef } from 'react';
+import { gsap } from 'gsap';
 
 export default function Cursor() {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
@@ -8,26 +8,26 @@ export default function Cursor() {
 
   useEffect(() => {
     // TODO Learn useContext and useRef here
-    const images = document.querySelectorAll(".img");
+    const images = document.querySelectorAll('.img');
 
     const tl = gsap.timeline({ paused: true });
 
-    tl.to(curs.current, { height: "112px", width:"112px", ease: "expo.inout" }).to(
-      svg.current,
-      { opacity: 1, width: "96px", height:"96px" },
-      0
-    );
+    tl.to(curs.current, {
+      height: '112px',
+      width: '112px',
+      ease: 'expo.inout',
+    }).to(svg.current, { opacity: 1, width: '96px', height: '96px' }, 0);
 
     images.forEach((img) => {
-      img.addEventListener("mouseenter", function () {
+      img.addEventListener('mouseenter', function () {
         tl.play();
       });
 
-      img.addEventListener("mouseleave", function () {
+      img.addEventListener('mouseleave', function () {
         tl.reverse();
-        tl.eventCallback("onReverseComplete", function () {
+        tl.eventCallback('onReverseComplete', function () {
           gsap.set(svg.current, { opacity: 0 }); // Hide the SVG element
-          gsap.set(curs.current, { height: "12px", width:"12px" }); // Hide the SVG element
+          gsap.set(curs.current, { height: '12px', width: '12px' }); // Hide the SVG element
         });
       });
     });
@@ -35,10 +35,10 @@ export default function Cursor() {
     function moveCursor(e) {
       setCursor({ x: e.clientX, y: e.clientY });
     }
-    document.addEventListener("mousemove", moveCursor);
+    document.addEventListener('mousemove', moveCursor);
 
     return () => {
-      document.removeEventListener("mousemove", moveCursor);
+      document.removeEventListener('mousemove', moveCursor);
     };
   }, []);
 

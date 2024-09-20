@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
-import profileImg from "/src/assets/images/me.jpg";
-import { ScrollTrigger } from "gsap/all";
-import { gsap } from "gsap";
-import Heading from "../ui/Heading";
+import { useEffect, useRef } from 'react';
+import profileImg from '/src/assets/images/me.jpg';
+import { ScrollTrigger } from 'gsap/all';
+import { gsap } from 'gsap';
+import Heading from '../ui/Heading';
 
 export default function About() {
   const profile = useRef(null);
@@ -13,21 +13,21 @@ export default function About() {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: aboutSection.current,
-      start: "top 400px",
+      start: 'top 400px',
       animation: gsap
         .timeline()
         .to(
           heading.current,
-          { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 },
+          { opacity: 1, y: 0, ease: 'power4.out', duration: 1.25 },
           0
         )
         .to(
           body.current,
-          { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 },
+          { opacity: 1, y: 0, ease: 'power4.out', duration: 1.25 },
           0.2
         ),
 
-      toggleActions: "play none none none",
+      toggleActions: 'play none none none',
     });
     ScrollTrigger.refresh();
   }, [aboutSection]);
@@ -56,8 +56,12 @@ export default function About() {
             >
               A brief intro, who am I?
             </h3>
-            <p ref={body} className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0">
-              I am an independent frontend developer, UI/UX designer and creator.
+            <p
+              ref={body}
+              className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0"
+            >
+              I am an independent frontend developer, UI/UX designer and
+              creator.
               <br></br>
               <br></br>I specialize in crafting elevated, intuitive, and
               minimalistic designs for startups and small businesses to help
@@ -65,7 +69,7 @@ export default function About() {
               <br></br>
               <br></br>
               When I am not developing or designing, I enjoy creating videos
-              that talk about frontend development, productivity and design on{" "}
+              that talk about frontend development, productivity and design on{' '}
               <a
                 className="underline duration-300 ease-in-out hover:text-secondary-700"
                 href="#about"

@@ -1,24 +1,24 @@
-import ServiceUi from "../ui/ServiceUi";
-import Heading from "../ui/Heading";
+import ServiceUi from '../ui/ServiceUi';
+import Heading from '../ui/Heading';
 
 export default function Services() {
   const expertiseItems = [
-    "Web Development",
-    "Web Design",
-    "Wireframing",
-    "UI/UX Design",
-    "Branding",
+    'Web Development',
+    'Web Design',
+    'Wireframing',
+    'UI/UX Design',
+    'Branding',
   ];
 
   const toolBoxItems = [
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "Figma",
-    "Webflow",
-    "GSAP",
-    "TailwindCSS",
-    "ReactJS",
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Figma',
+    'Webflow',
+    'GSAP',
+    'TailwindCSS',
+    'ReactJS',
   ];
 
   return (

@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
-import { useRef, useEffect } from "react";
+import { gsap } from 'gsap';
+import { useRef, useEffect } from 'react';
 
 export default function Hero() {
   const img = useRef(null);
@@ -13,15 +13,15 @@ export default function Hero() {
     tl.from(imgContainer.current, {
       scale: 1.3,
       duration: 3.25,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     })
       .from(
         img.current,
-        { scale: 2, duration: 3.2, ease: "power4.inOut" },
-        "-=3.1"
+        { scale: 2, duration: 3.2, ease: 'power4.inOut' },
+        '-=3.1'
       )
-      .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5")
-      .from(scroll.current, { opacity: 0, duration: 1, ease: "out" }, "-=2");
+      .to(titles.current, { y: 0, duration: 2, ease: 'power4.inOut' }, '-=2.5')
+      .from(scroll.current, { opacity: 0, duration: 1, ease: 'out' }, '-=2');
   }, []);
 
   return (
@@ -45,7 +45,9 @@ export default function Hero() {
         </div>
         <div className="title-success">
           <button className="button1 pl-[90px]">
-            <a href="/" className="font-medium">HEAD BACK HOME</a>
+            <a href="/" className="font-medium">
+              HEAD BACK HOME
+            </a>
             <div class="icon">
               <span>
                 <svg

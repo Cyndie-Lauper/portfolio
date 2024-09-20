@@ -1,10 +1,10 @@
-import significo from "/src/assets/images/significo-desktop.png";
-import memento from "/src/assets/images/memento-desktop.webp";
-import acc from "/src/assets/images/acc-square.webp";
-import daddy from "/src/assets/images/godaddy-desktop.webp";
-import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
-import Projects from "../ui/Projects";
-import Heading from "../ui/Heading";
+import significo from '/src/assets/images/significo-desktop.png';
+import memento from '/src/assets/images/memento-desktop.webp';
+import acc from '/src/assets/images/acc-square.webp';
+import daddy from '/src/assets/images/godaddy-desktop.webp';
+import sunnyside from '/src/assets/images/sunnyside-desktop.webp';
+import Projects from '../ui/Projects';
+import Heading from '../ui/Heading';
 
 export default function Works({ forwardedRef }) {
   return (
@@ -13,7 +13,7 @@ export default function Works({ forwardedRef }) {
       id="works"
       className="nav-change overflow-hidden my-[10%]"
     >
-     <Heading title="Projects" />
+      <Heading title="Projects" />
       <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
         {/* Project #1 */}
         <div className=" col-span-1 md:col-span-12">
@@ -62,7 +62,7 @@ export default function Works({ forwardedRef }) {
           />
         </div>
         <div className="col-span-1 h-fit md:col-span-4">
-        <Projects
+          <Projects
             link="https://sunnysidechallenge.netlify.app"
             img={sunnyside}
             alt="sunnyside project mockup"
@@ -71,7 +71,6 @@ export default function Works({ forwardedRef }) {
             year="2022"
             tools="HTML • TailwindCSS • JavaScript"
           />
-         
         </div>
       </div>
     </section>

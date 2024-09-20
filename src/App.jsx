@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/HomePage";
-import Success from "./pages/SuccessPage";
-import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import Preloader from "./components/Preloader/Preloader";
-import { Analytics } from "@vercel/analytics/react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/HomePage';
+import Success from './pages/SuccessPage';
+import { useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import Preloader from './components/Preloader/Preloader';
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +15,6 @@ const App = () => {
       window.scrollTo(0, 0);
     }, 2000);
   });
-
   return (
     <>
       <AnimatePresence mode="wait">

@@ -1,4 +1,4 @@
-import HeadingSVG from "./HeadingSVG";
+import HeadingSVG from './HeadingSVG';
 
 export default function Heading({ title }) {
   return (

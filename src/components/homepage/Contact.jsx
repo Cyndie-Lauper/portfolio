@@ -1,9 +1,9 @@
-import { Icon } from "@iconify/react";
-import { useEffect, useState, useRef } from "react";
-import { ScrollTrigger } from "gsap/all";
-import { gsap } from "gsap";
-import Heading from "../ui/Heading";
-import emailjs from "@emailjs/browser";
+import { Icon } from '@iconify/react';
+import { useEffect, useState, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/all';
+import { gsap } from 'gsap';
+import Heading from '../ui/Heading';
+import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
 
 export default function Contact() {
@@ -19,39 +19,39 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_n4a2pln", "template_xra6wfb", form.current, {
-        publicKey: "cV9Gum6f7sNuw_XRW",
+      .sendForm('service_n4a2pln', 'template_xra6wfb', form.current, {
+        publicKey: 'cV9Gum6f7sNuw_XRW',
       })
       .then(
         () => {
-          console.log("SUCCESS!");
-          navigate('/success')
+          console.log('SUCCESS!');
+          navigate('/success');
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.log('FAILED...', error.text);
         }
       );
   };
   useEffect(() => {
     ScrollTrigger.create({
       trigger: contactSection.current,
-      start: "180px bottom",
+      start: '180px bottom',
 
       // markers: true,
       animation: gsap
         .timeline()
         .to(
           heading.current,
-          { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 },
+          { opacity: 1, y: 0, ease: 'power4.out', duration: 1.25 },
           0
         )
         .to(
           body.current,
-          { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 },
+          { opacity: 1, y: 0, ease: 'power4.out', duration: 1.25 },
           0.2
         ),
 
-      toggleActions: "play none none none",
+      toggleActions: 'play none none none',
     });
     ScrollTrigger.refresh();
   }, [contactSection]);

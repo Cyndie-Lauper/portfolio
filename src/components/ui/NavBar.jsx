@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import Lenis from "@studio-freight/lenis";
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import Lenis from '@studio-freight/lenis';
 
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function NavBar({ sectionRefs }) {
   const navBar = useRef(null);
@@ -27,7 +27,7 @@ export default function NavBar({ sectionRefs }) {
       y: 0,
       duration: 3,
       delay: 2.2,
-      ease: "power4.inOut",
+      ease: 'power4.inOut',
     });
   });
 
@@ -35,16 +35,16 @@ export default function NavBar({ sectionRefs }) {
     sectionRefs.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
-        start: "top 375px",
-        end: "bottom 300px",
+        start: 'top 375px',
+        end: 'bottom 300px',
         // markers: true,
         animation: gsap
           .timeline()
-          .to(navBar.current, { color: "#DDDDD5" })
-          .to(cta.current, { backgroundColor: "#D1D1C7", color: "#0E0E0C" }, 0)
-          .to(".bg-secondary-200", { backgroundColor: "#0E0E0C" }, 0),
+          .to(navBar.current, { color: '#DDDDD5' })
+          .to(cta.current, { backgroundColor: '#D1D1C7', color: '#0E0E0C' }, 0)
+          .to('.bg-secondary-200', { backgroundColor: '#0E0E0C' }, 0),
 
-        toggleActions: "restart reverse restart reverse",
+        toggleActions: 'restart reverse restart reverse',
       });
     });
   });

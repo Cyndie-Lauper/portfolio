@@ -1,19 +1,18 @@
-import Footer from "./Footer";
-import { useEffect } from "react";
+import Footer from './Footer';
+import { useEffect } from 'react';
 import Lenis from 'lenis';
 
 export default function StickyFooter() {
-
-  useEffect( () => {
-    const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis();
 
     function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
-  }, [])
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <>

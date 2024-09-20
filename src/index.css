@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  
   ::-moz-selection {
     background: #d1d1c7;
   }
@@ -23,16 +22,16 @@
   }
 
   @font-face {
-    font-family: "CabinetGrotesk-Variable";
-    src: url("./assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+    font-family: 'CabinetGrotesk-Variable';
+    src: url('./assets/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
     font-weight: 100 900;
     font-display: swap;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "GeneralSans-Variable";
-    src: url("./assets/fonts/GeneralSans-Variable.ttf") format("truetype");
+    font-family: 'GeneralSans-Variable';
+    src: url('./assets/fonts/GeneralSans-Variable.ttf') format('truetype');
     font-weight: 200 700;
     font-display: swap;
     font-style: normal;
@@ -116,7 +115,7 @@
   align-items: center;
   gap: 1em;
   font-size: 18px;
-  color: #70705C;
+  color: #70705c;
 }
 
 .button1 .icon {
