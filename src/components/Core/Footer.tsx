@@ -1,4 +1,4 @@
-export default function Footer() {
+export function Footer() {
   function toTop() {
     window.scrollTo(0, 0);
   }

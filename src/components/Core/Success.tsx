@@ -1,10 +1,10 @@
 import { gsap } from 'gsap';
 import { useRef, useEffect } from 'react';
 
-export default function Hero() {
+export function Success() {
   const img = useRef(null);
   const imgContainer = useRef(null);
-  const titles = useRef([]);
+  const titles = useRef<HTMLHeadingElement[]>([]);
   const scroll = useRef(null);
 
   useEffect(() => {
@@ -33,12 +33,18 @@ export default function Hero() {
       <div className="z-10 mb-10 grid w-full grid-cols-2 text-title text-accent-300">
         <div className="title-success pl-20 text-start text-[90px] font-semibold uppercase">
           {/* Learn more about useRef */}
-          <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-96">
+          <h1
+            ref={(el) => (titles.current[0] = el as HTMLHeadingElement)}
+            className="translate-y-96"
+          >
             Success! <br /> message sent.
           </h1>
         </div>
         <div className="title-success pr-60 pt-[135px] text-end text-[40px] font-medium text-secondary-700">
-          <h1 ref={(el) => (titles.current[1] = el)} className="translate-y-96">
+          <h1
+            ref={(el) => (titles.current[1] = el as HTMLHeadingElement)}
+            className="translate-y-96"
+          >
             I will get back to you <br />
             as soon as possible!
           </h1>
@@ -48,7 +54,7 @@ export default function Hero() {
             <a href="/" className="font-medium">
               HEAD BACK HOME
             </a>
-            <div class="icon">
+            <div className="icon">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

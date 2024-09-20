@@ -4,7 +4,7 @@ import Lenis from '@studio-freight/lenis';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function NavBar({ sectionRefs }) {
+export function NavBar({ sectionRefs }) {
   const navBar = useRef(null);
   const cta = useRef(null);
   const tl = gsap.timeline();

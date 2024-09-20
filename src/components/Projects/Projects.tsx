@@ -1,4 +1,20 @@
-export default function Projects({ name, img, alt, type, link, year, tools }) {
+export function Projects({
+  name,
+  img,
+  alt,
+  type,
+  link,
+  year,
+  tools,
+}: {
+  name: string;
+  img: string;
+  alt: string;
+  type: string;
+  link: string;
+  year: string;
+  tools: string;
+}) {
   return (
     <div>
       <a

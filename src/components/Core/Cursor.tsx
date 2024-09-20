@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 
-export default function Cursor() {
+export function Cursor() {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const curs = useRef(null);
   const svg = useRef(null);
@@ -32,7 +32,7 @@ export default function Cursor() {
       });
     });
 
-    function moveCursor(e) {
+    function moveCursor(e: any) {
       setCursor({ x: e.clientX, y: e.clientY });
     }
     document.addEventListener('mousemove', moveCursor);

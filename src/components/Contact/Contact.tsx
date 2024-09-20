@@ -2,24 +2,24 @@ import { Icon } from '@iconify/react';
 import { useEffect, useState, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/all';
 import { gsap } from 'gsap';
-import Heading from '../ui/Heading';
+import { Heading } from '@/components/Core';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
 
-export default function Contact() {
+export function Contact() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-  const heading = useRef(null);
-  const body = useRef(null);
-  const contactSection = useRef(null);
-  const form = useRef();
+  const heading = useRef<HTMLHeadingElement>(null);
+  const body = useRef<HTMLParagraphElement>(null);
+  const contactSection = useRef<HTMLDivElement>(null);
+  const form = useRef<HTMLFormElement>(null);
   const navigate = useNavigate();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_n4a2pln', 'template_xra6wfb', form.current, {
+      .sendForm('service_n4a2pln', 'template_xra6wfb', form.current as unknown as HTMLFormElement, {
         publicKey: 'cV9Gum6f7sNuw_XRW',
       })
       .then(
@@ -133,7 +133,7 @@ export default function Contact() {
                   required
                   id="message"
                   name="message"
-                  rows="5"
+                  rows={5}
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 ></textarea>
