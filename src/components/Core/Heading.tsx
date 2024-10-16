@@ -1,6 +1,6 @@
-import HeadingSVG from './HeadingSVG';
+import HeadingSVG from '@/components/Core/HeadingSVG';
 
-export default function Heading({ title }) {
+export function Heading({ title }: { title: string }) {
   return (
     <>
       <div className="section-heading select-none">

@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import profileImg from '/src/assets/images/me.jpg';
+import profileImg from '@/assets/images/me.jpg';
 import { ScrollTrigger } from 'gsap/all';
 import { gsap } from 'gsap';
-import Heading from '../ui/Heading';
+import { Heading } from '@/components';
 
-export default function About() {
+export function About() {
   const profile = useRef(null);
   const aboutSection = useRef(null);
   const heading = useRef(null);

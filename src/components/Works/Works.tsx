@@ -1,12 +1,11 @@
-import significo from '/src/assets/images/significo-desktop.png';
-import memento from '/src/assets/images/memento-desktop.webp';
-import acc from '/src/assets/images/acc-square.webp';
-import daddy from '/src/assets/images/godaddy-desktop.webp';
-import sunnyside from '/src/assets/images/sunnyside-desktop.webp';
-import Projects from '../ui/Projects';
-import Heading from '../ui/Heading';
+import significo from '@/assets/images/significo-desktop.png';
+import memento from '@/assets/images/memento-desktop.webp';
+import acc from '@/assets/images/acc-square.webp';
+import daddy from '@/assets/images/godaddy-desktop.webp';
+import sunnyside from '@/assets/images/sunnyside-desktop.webp';
+import { Projects, Heading } from '@/components';
 
-export default function Works({ forwardedRef }) {
+export function Works({ forwardedRef }: { forwardedRef: React.RefObject<HTMLDivElement> }) {
   return (
     <section
       ref={forwardedRef}

@@ -1,11 +1,9 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
-import NavBar from '../components/ui/NavBar';
-import Success from '../components/homepage/Success';
-import Footer from '../components/ui/Footer';
+import { NavBar, Success, Footer } from '@/components';
 
-export default function SuccessPage() {
+export function SuccessPage() {
   gsap.registerPlugin(ScrollTrigger);
 
   const sectionRefs = useRef([]);

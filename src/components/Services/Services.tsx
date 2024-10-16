@@ -1,7 +1,7 @@
-import ServiceUi from '../ui/ServiceUi';
-import Heading from '../ui/Heading';
+import ServiceUi from './ServiceUi';
+import { Heading } from '@/components';
 
-export default function Services() {
+export function Services() {
   const expertiseItems = [
     'Web Development',
     'Web Design',

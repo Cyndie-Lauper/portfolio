@@ -4,7 +4,7 @@ import Lenis from '@studio-freight/lenis';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function NavBar({ sectionRefs }) {
+export function NavBar({ sectionRefs }: { sectionRefs: any }) {
   const navBar = useRef(null);
   const cta = useRef(null);
   const tl = gsap.timeline();
@@ -12,7 +12,7 @@ export default function NavBar({ sectionRefs }) {
 
   useEffect(() => {
     const lenis = new Lenis();
-    const raf = (time) => {
+    const raf = (time: any) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
@@ -32,7 +32,7 @@ export default function NavBar({ sectionRefs }) {
   });
 
   useEffect(() => {
-    sectionRefs.forEach((section) => {
+    sectionRefs.forEach((section: any) => {
       ScrollTrigger.create({
         trigger: section,
         start: 'top 375px',

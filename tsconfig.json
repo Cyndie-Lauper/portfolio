@@ -15,10 +15,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "typeRoots": ["node_modules/@types", "src/types"],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "src/main.tsx", "src/main.tsx", "src/components/NavBar/NavBar.jsx", "src/components/NavBar/NavBar.jsx"],
   "exclude": ["node_modules", "build"]
 }

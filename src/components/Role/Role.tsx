@@ -1,4 +1,8 @@
-export default function Role({ forwardedRef }) {
+export function Role({
+  forwardedRef,
+}: {
+  forwardedRef: React.RefObject<HTMLDivElement>;
+}) {
   return (
     <section
       ref={forwardedRef}
