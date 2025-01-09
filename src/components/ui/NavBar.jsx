@@ -25,8 +25,7 @@ export default function NavBar({ sectionRefs }) {
   useEffect(() => {
     tl.to(navBar.current, {
       y: 0,
-      duration: 3,
-      delay: 2.2,
+      duration: 1.5,
       ease: 'power4.inOut',
     });
   });
@@ -67,18 +66,6 @@ export default function NavBar({ sectionRefs }) {
         <a href="/#works" className="group relative hidden md:inline-block">
           <span>projects</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
-        {/* Call to action button with hover effect */}
-        <a
-          href="/#contact"
-          ref={cta}
-          className="group relative inline-block px-4 py-2 bg-secondary-600 text-white rounded-md transition duration-300 ease-in-out hover:bg-transparent"
-        >
-          <span className="relative">
-            contact
-            {/* Underline effect on hover */}
-            <span className="absolute bottom-0 left-0 h-[0.125em] w-0 bg-white duration-300 ease-in-out group-hover:w-full"></span>
-          </span>
         </a>
       </nav>
     </header>
