@@ -4,6 +4,18 @@ import Lenis from '@studio-freight/lenis';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+/**
+ * The navbar component.
+ *
+ * This component renders a sticky navbar with links to each section of the
+ * website. It also sets up a scroll trigger to animate the navbar when the user
+ * scrolls past each section.
+ *
+ * @param {Object} sectionRefs - An object with references to each section of the
+ * website.
+ *
+ * @returns {JSX.Element} - The navbar component.
+ */
 export default function NavBar({ sectionRefs }) {
   const navBar = useRef(null);
   const cta = useRef(null);
@@ -25,8 +37,7 @@ export default function NavBar({ sectionRefs }) {
   useEffect(() => {
     tl.to(navBar.current, {
       y: 0,
-      duration: 3,
-      delay: 2.2,
+      duration: 1.5,
       ease: 'power4.inOut',
     });
   });
@@ -68,15 +79,9 @@ export default function NavBar({ sectionRefs }) {
           <span>projects</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
-        <a
-          ref={cta}
-          className="button group relative hover:bg-transparent"
-          href="#contact"
-        >
-          <span className="relative w-fit">
-            <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
-            <span>Let&apos;s Talk.</span>
-          </span>
+        <a href="/#contact" className="group relative hidden md:inline-block">
+          <span>contact</span>
+          <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
       </nav>
     </header>
