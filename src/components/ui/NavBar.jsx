@@ -4,6 +4,18 @@ import Lenis from '@studio-freight/lenis';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+/**
+ * The navbar component.
+ *
+ * This component renders a sticky navbar with links to each section of the
+ * website. It also sets up a scroll trigger to animate the navbar when the user
+ * scrolls past each section.
+ *
+ * @param {Object} sectionRefs - An object with references to each section of the
+ * website.
+ *
+ * @returns {JSX.Element} - The navbar component.
+ */
 export default function NavBar({ sectionRefs }) {
   const navBar = useRef(null);
   const cta = useRef(null);
@@ -65,6 +77,10 @@ export default function NavBar({ sectionRefs }) {
         </a>
         <a href="/#works" className="group relative hidden md:inline-block">
           <span>projects</span>
+          <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="/#contact" className="group relative hidden md:inline-block">
+          <span>contact</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
       </nav>
