@@ -68,6 +68,10 @@ export default function NavBar({ sectionRefs }) {
           <span>projects</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
+        <a href="/#contact" className="group relative hidden md:inline-block">
+          <span>contact</span>
+          <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
       </nav>
     </header>
   );
