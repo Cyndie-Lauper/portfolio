@@ -41,7 +41,7 @@ export default function Hero() {
             ref={(el) => (titles.current[0] = el)}
             className="translate-y-96 overflow-visible"
           >
-            Hey, I&apos;m Thinh
+            Hey, I&apos;m Minh
           </h1>
         </div>
         <div className="title py-0 text-center font-bold uppercase 2xl:text-[9vw]">
@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
         <div className="title py-0 text-lg font-medium leading-tight">
           <h1 ref={(el) => (titles.current[2] = el)} className="translate-y-96">
-            CREATE BY ThinhDo (IT'S ME)
+            CREATE BY TUANMINH
           </h1>
         </div>
       </div>
