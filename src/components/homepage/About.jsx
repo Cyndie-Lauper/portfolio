@@ -45,7 +45,7 @@ export default function About() {
             src={profileImg}
             width="600"
             height="800"
-            alt="portrait image of Thinh standing in front of a tree and foliage"
+            alt="portrait image of Minh standing in front of a tree and foliage"
           />
         </div>
         <div className="top-20 sm:sticky md:top-28 lg:top-32 md:w-1/2">
