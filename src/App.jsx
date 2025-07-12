@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/HomePage';
-import Success from './pages/SuccessPage';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Preloader from './components/Preloader/Preloader';
+import { Preloader } from './components';
 import { Analytics } from '@vercel/analytics/react';
+import { HomePage, SuccessPage } from './pages';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,8 +22,8 @@ const App = () => {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/success" element={<Success />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/success" element={<SuccessPage />} />
         </Routes>
       </BrowserRouter>
       <Analytics />
